@@ -1,17 +1,10 @@
 
-const path = require('path');
+const fs = require('fs');
 
-var pathObj = path.parse(__filename);
+// const files = fs.readdirSync('./');
+// console.log(files);
 
-console.log(pathObj);
-
-const os = require('os');
-
-os.totalmem();
-os.freemem();
-
-var totalMem = os.totalmem();
-var freeMem = os.freemem();
-
-console.log(`Total memory ${totalMem}`);
-console.log(`Free memory ${freeMem}`);
+fs.readdir('./', function(err, files) {
+ if (err) console.log('Error', err);
+ else console.log('Result', files);
+});
