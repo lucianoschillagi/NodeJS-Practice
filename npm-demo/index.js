@@ -4,5 +4,5 @@ var _ = require('underscore');
 // File or folder
 // node_modules
 
-var result = _.contains([1, 2, 3], 2);
+var result = _.contains([1, 2, 3], 3); // 'contains' is a method of 'underscore' package
 console.log(result);
